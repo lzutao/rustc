@@ -1,5 +1,7 @@
 // build-pass (FIXME(62277): could be check-pass?)
 
+#![allow(deprecated)] // `{integer}::max_value` and `min_value`
+
 fn main() {
     let x: &'static u8 = &u8::max_value();
     let x: &'static u16 = &u16::max_value();

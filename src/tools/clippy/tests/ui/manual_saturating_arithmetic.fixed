@@ -1,6 +1,7 @@
 // run-rustfix
 
 #![allow(unused_imports)]
+#![allow(deprecated)] // `{integer}::max_value` and `min_value`
 
 use std::{i128, i32, u128, u32};
 
