@@ -2,6 +2,21 @@
 
 #[lang = "bool"]
 impl bool {
+    /// Returns the unary logical negation operator of a boolean.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// #![feature(bool_not)]
+    /// assert_eq!(true.not(), false);
+    /// assert_eq!(true.not(), !true);
+    /// ```
+    #[unstable(feature = "bool_not", issue = "none")]
+    #[inline]
+    pub fn not(self) -> bool {
+        !self
+    }
+
     /// Returns `Some(t)` if the `bool` is `true`, or `None` otherwise.
     ///
     /// # Examples
