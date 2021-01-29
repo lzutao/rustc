@@ -5,7 +5,7 @@
 #![feature(decl_macro, rustc_attrs)]
 
 mod x {
-    pub use std::ops::Not as _;
+    pub use std::ops::BitOr as _;
 }
 
 macro m() {
@@ -17,7 +17,7 @@ macro m() {
         use self::y::*;
         use std::ops::DerefMut as _;
         fn f() {
-            false.not();
+            false.bitor(true);
             (&()).deref();
             (&mut ()).deref_mut();
         }
@@ -33,7 +33,7 @@ macro n() {
     use crate::z::*;
     use std::ops::DerefMut as _;
     fn f() {
-        false.not();
+        false.bitor(true);
         (&()).deref();
         (&mut ()).deref_mut();
     }
